@@ -1,0 +1,50 @@
+{
+  "schema_version": "3.0",
+  "rounding": {"percentage_decimal_places": 1},
+  "windows": {"rolling_median_weeks": 8, "robust_z_history_changes": 26, "robust_z_min_history_changes": 12},
+  "robust_z": {"yellow": 2.0, "red": 3.0, "enabled": true},
+  "expected_region_member_tier_keys": [
+    "N|SILVER", "N|GOLD", "N|BLACK", "N|BLACK_DIAMOND", "N|STAR_DIAMOND",
+    "S|SILVER", "S|GOLD", "S|BLACK", "S|BLACK_DIAMOND", "S|STAR_DIAMOND",
+    "W|SILVER", "W|GOLD", "W|BLACK", "W|BLACK_DIAMOND", "W|STAR_DIAMOND"
+  ],
+  "enforce_complete_region_member_tier_set": true,
+  "total_region": {
+    "TOTAL": {"wow": {"yellow": 5, "red": 10}, "decline": {"yellow_weeks": 2, "yellow": 5, "red_weeks": 3, "red": 10}, "yoy_ytd": {"yellow": 5, "red": 10}},
+    "N": {"wow": {"yellow": 5, "red": 10}, "decline": {"yellow_weeks": 2, "yellow": 5, "red_weeks": 3, "red": 10}, "yoy_ytd": {"yellow": 5, "red": 10}},
+    "S": {"wow": {"yellow": 7, "red": 12}, "decline": {"yellow_weeks": 2, "yellow": 7, "red_weeks": 3, "red": 12}, "yoy_ytd": {"yellow": 5, "red": 10}},
+    "W": {"wow": {"yellow": 15, "red": 30}, "decline": {"yellow_weeks": 2, "yellow": 15, "red_weeks": 3, "red": 25}, "yoy_ytd": {"yellow": 10, "red": 20}}
+  },
+  "member_tier": {
+    "SILVER": {"yellow": 15, "red": 25},
+    "GOLD": {"yellow": 12, "red": 20},
+    "BLACK": {"yellow": 12, "red": 20},
+    "BLACK_DIAMOND": {"yellow": 10, "red": 15},
+    "STAR_DIAMOND": {"yellow": 15, "red": 25}
+  },
+  "member_count": {"yellow": 10, "red": 15},
+  "region_member_tier": {
+    "wow": {"yellow_rate": 20, "yellow_amount": 50000, "red_rate": 35, "red_amount": 100000},
+    "decline": {"yellow_weeks": 2, "yellow": 20, "red_weeks": 3, "red": 35}
+  },
+  "brand_tiers": [
+    {"name": "L", "median_min": 500000, "yellow_rate": 10, "yellow_amount": 50000, "red_rate": 20, "red_amount": 100000},
+    {"name": "M", "median_min": 100000, "median_max": 500000, "yellow_rate": 15, "yellow_amount": 30000, "red_rate": 30, "red_amount": 60000},
+    {"name": "S", "median_min": 20000, "median_max": 100000, "yellow_rate": 25, "yellow_amount": 10000, "red_rate": 50, "red_amount": 20000},
+    {"name": "XS", "median_max": 20000, "yellow_rate": 50, "yellow_amount": 5000, "red_rate": 80, "red_amount": 10000}
+  ],
+  "brands": {
+    "HERMES": {"wow": {"yellow": 8, "red": 15}, "median": {"yellow": 10, "red": 20}},
+    "HERMES 爱马仕": {"wow": {"yellow": 8, "red": 15}, "median": {"yellow": 10, "red": 20}},
+    "LV": {"wow": {"yellow": 10, "red": 20}, "median": {"yellow": 15, "red": 25}},
+    "LOUIS VUITTON 路易威登": {"wow": {"yellow": 10, "red": 20}, "median": {"yellow": 15, "red": 25}},
+    "DIOR": {"wow": {"yellow": 15, "red": 30}, "median": {"yellow": 20, "red": 35}},
+    "DIOR 迪奥": {"wow": {"yellow": 15, "red": 30}, "median": {"yellow": 20, "red": 35}}
+  },
+  "capture_ratio": {"yellow_pp": 2, "red_pp": 5},
+  "aliases": {
+    "dimension_type": {"总计": "TOTAL", "街区": "REGION", "卡级": "MEMBER_TIER", "街区×卡级": "REGION_MEMBER_TIER", "店铺": "BRAND", "品牌": "BRAND", "STORE": "BRAND"},
+    "region": {"北区": "N", "南区": "S", "西区": "W"},
+    "brand": {}
+  }
+}

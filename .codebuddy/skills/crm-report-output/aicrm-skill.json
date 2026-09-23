@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0",
+  "name": "crm-report-output",
+  "package_version": "3.2.12",
+  "entrypoint": "scripts/run_report_output.py",
+  "assets": [
+    "assets/周报模板.xlsx"
+  ]
+}

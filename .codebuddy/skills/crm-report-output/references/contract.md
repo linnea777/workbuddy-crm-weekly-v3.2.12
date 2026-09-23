@@ -1,0 +1,9 @@
+# 三页报告输出契约
+
+输入MetricBundle、AnomalyBundle、InvestigationPlan、InsightBundle、EvidenceLedger需同周同输入同实现；上游必须已通过validate_insights。输出仅报告、洞察、分析说明。
+
+报告沿用原模板指标与会员Top10，金额和会员号由代码填入。洞察两列为title/narrative，正文必须由模型写好，禁止机械拼接内部归因字段。分析说明为title/confidence/analysis_note.basis/业务来源名/analysis_note.limitations；report_notes补充共性口径，重大数据质量披露不能丢失。
+
+内部signal/fact/activity引用用于验证，不能写入业务正文；不导出审计记录或全部异常。模板不得覆盖，输出原子保存；缺失指标保留N/A，错误值与未计算占位符阻断交付。长正文按内容调整行高，超出可读范围时应重新组织文字而非缩小字号。
+
+输出前验证action_text非空并完整出现在narrative末段；recommendation适用时其action与action_text一致，否则报错而非静默丢弃建议。业务正文仍由宿主模型撰写，程序仅原文换段，保持主题／洞察两列。

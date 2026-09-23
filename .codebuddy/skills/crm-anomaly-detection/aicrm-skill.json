@@ -1,0 +1,6 @@
+{
+  "schema_version": "1.0",
+  "name": "crm-anomaly-detection",
+  "package_version": "3.2.12",
+  "entrypoint": "scripts/run_anomaly_detection.py"
+}

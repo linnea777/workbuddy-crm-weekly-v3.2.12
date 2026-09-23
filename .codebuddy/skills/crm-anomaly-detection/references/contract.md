@@ -1,0 +1,5 @@
+# 检测契约
+
+读取MetricBundle.anomaly_records，全量执行default_config.json既有阈值。保留每个信号的比较基准与方向，业务信号方向相反时组为MIXED；Z-score只在业务规则命中后追加。连续下降使用真实连续有效后缀，8周基线必须紧邻本周且无缺口，Robust Z仅使用真实相邻有效周变化。
+
+governance只添加发布身份，不把RED绑定深查。prepare的selection基于经营影响和趋势建立候选主题；原始告警与信号全部保留，额外绝对贡献候选标记group_kind=IMPACT_CANDIDATE、severity=INFO，不伪造阈值命中。

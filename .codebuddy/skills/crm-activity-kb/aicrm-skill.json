@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0",
+  "name": "crm-activity-kb",
+  "package_version": "3.2.12",
+  "entrypoint": "scripts/run_activity_kb.py",
+  "assets": [
+    "assets/activity_knowledge_base.xlsx"
+  ]
+}
